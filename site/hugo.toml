@@ -1,3 +1,13 @@
 baseURL = "https://authprobe.com/"
 languageCode = "en-us"
 title = "AuthProbe"
+
+[outputs]
+home = ["HTML", "RSS"]
+section = ["HTML", "RSS"]
+taxonomy = ["HTML"]
+term = ["HTML"]
+
+[outputFormats.RSS]
+baseName = "index"
+
