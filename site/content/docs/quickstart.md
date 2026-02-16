@@ -1,6 +1,7 @@
 ---
 title: "Quickstart"
 description: "Run your first scan and understand the output."
+date: 2026-02-16
 weight: 20
 ---
 

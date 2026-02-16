@@ -1,0 +1,49 @@
+{{ define "main" }}
+
+<div class="container py-4">
+  <div class="row">
+
+    <nav class="col-lg-3 d-none d-lg-block">
+      <div class="position-sticky" style="top: 1rem;">
+        <h6 class="text-muted text-uppercase mb-3">Documentation</h6>
+        <ul class="nav flex-column">
+          {{ $currentPage := . }}
+          {{ range .Parent.Pages.ByWeight }}
+          <li class="nav-item">
+            <a class="nav-link{{ if eq . $currentPage }} active fw-semibold{{ end }}" href="{{ .Permalink }}">{{ .Title }}</a>
+          </li>
+          {{ end }}
+        </ul>
+        <hr>
+        <a class="nav-link text-muted small" href="https://github.com/authprobe/authprobe">
+          <svg xmlns="http://www.w3.org/2000/svg" class="feather me-1"><use href="{{ `images/feather/feather-sprite.svg#github` | relURL }}"/></svg>Edit on GitHub
+        </a>
+      </div>
+    </nav>
+
+    <main class="col-lg-9">
+      <h1 class="mb-4">{{ .Title }}</h1>
+      {{ .Content }}
+
+      <nav class="d-flex justify-content-between mt-5 pt-3 border-top">
+        {{ with .PrevInSection }}
+        <a href="{{ .Permalink }}" class="text-decoration-none">
+          <small class="text-muted d-block">Previous</small>
+          {{ .Title }}
+        </a>
+        {{ else }}
+        <span></span>
+        {{ end }}
+        {{ with .NextInSection }}
+        <a href="{{ .Permalink }}" class="text-decoration-none text-end">
+          <small class="text-muted d-block">Next</small>
+          {{ .Title }}
+        </a>
+        {{ end }}
+      </nav>
+    </main>
+
+  </div>
+</div>
+
+{{ end }}

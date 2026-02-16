@@ -1,6 +1,7 @@
 ---
 title: "Install"
 description: "Install via script, Go toolchain, Docker, or release binary."
+date: 2026-02-16
 weight: 10
 ---
 
