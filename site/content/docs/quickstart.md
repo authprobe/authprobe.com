@@ -1,5 +1,6 @@
 ---
 title: "Quickstart"
+description: "Run your first scan and understand the output."
 weight: 20
 ---
 

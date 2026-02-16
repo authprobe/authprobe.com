@@ -3,7 +3,9 @@
 baseURL = "https://authprobe.com/"
 languageCode = "en-us"
 title = "AuthProbe"
+copyright = "AuthProbe Authors"
 enableRobotsTXT = true
+enableEmoji = true
 theme = "hugo-bootstrap-theme"
 themesdir = "node_modules/@filipecarneiro"
 
@@ -24,9 +26,14 @@ themesdir = "node_modules/@filipecarneiro"
 [params]
   images = ["/img/logo.svg"]
   author = "AuthProbe"
-  description = "AuthProbe is a CLI that pinpoints where MCP OAuth breaks and provides deterministic findings and verification commands."
+  description = "authprobe pinpoints MCP OAuth failures. Scan any MCP endpoint and get deterministic findings mapped to RFCs."
   github = "https://github.com/authprobe/authprobe"
   logo = "/img/logo.svg"
+  mainMenuLogo = "/img/logo.svg"
+
+  [params.options]
+    bootStrapJs = true
+    breadCrumb = true
 
 [[menu.main]]
   name = "Docs"
@@ -40,10 +47,12 @@ themesdir = "node_modules/@filipecarneiro"
 
 [[menu.social]]
   name = "GitHub"
+  pre = "<svg xmlns='http://www.w3.org/2000/svg' class='feather'><use href='/images/feather/feather-sprite.svg#github'/></svg>"
   url = "https://github.com/authprobe/authprobe"
   weight = 10
 
 [[menu.social]]
-  name = "X"
-  url = "https://x.com/authprobe"
+  name = "Discord"
+  pre = "<svg xmlns='http://www.w3.org/2000/svg' class='feather'><use href='/images/feather/feather-sprite.svg#message-circle'/></svg>"
+  url = "https://discord.gg/ZYRjaZEsNV"
   weight = 20

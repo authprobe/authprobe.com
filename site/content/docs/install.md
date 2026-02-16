@@ -1,5 +1,6 @@
 ---
 title: "Install"
+description: "Install via script, Go toolchain, Docker, or release binary."
 weight: 10
 ---
 

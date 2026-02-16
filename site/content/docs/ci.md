@@ -1,5 +1,6 @@
 ---
 title: "CI Integration"
+description: "Add AuthProbe to GitHub Actions as a regression gate."
 weight: 30
 ---
 

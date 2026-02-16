@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+<div class="container py-4">
+  <h1 class="mb-4">{{ .Title }}</h1>
+  {{ .Content }}
+
+  <div class="row g-4 mt-2">
+    {{ range .Pages.ByWeight }}
+    <div class="col-lg-4 col-md-6">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title text-primary">{{ .Title }}</h5>
+          {{ with .Description }}
+          <p class="card-text text-muted">{{ . }}</p>
+          {{ else }}
+          <p class="card-text text-muted">{{ .Summary | truncate 120 }}</p>
+          {{ end }}
+          <a class="stretched-link" href="{{ .Permalink }}"></a>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+
+{{ end }}

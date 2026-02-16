@@ -1,0 +1,101 @@
+{{ define "main" }}
+
+<section class="section bd-masthead">
+  <div class="container-xxl">
+    <div class="col-md-8 mx-auto text-center my-5">
+      <img class="d-block mx-auto mb-3" src="{{ `img/logo.svg` | relURL }}" width="120" height="120" alt="AuthProbe">
+      <h1 class="display-4 fw-semibold mb-3">Pinpoint MCP OAuth failures</h1>
+      <p class="lead mb-4">{{ .Site.Params.Description }}</p>
+      <div class="d-flex justify-content-center gap-3 mb-3">
+        <a class="btn btn-primary btn-lg px-4" href="/docs/quickstart/" role="button">Get started</a>
+        <a class="btn btn-outline-secondary btn-lg px-4" href="https://github.com/authprobe/authprobe" role="button">
+          <svg xmlns="http://www.w3.org/2000/svg" class="feather me-1"><use href="{{ `images/feather/feather-sprite.svg#github` | relURL }}"/></svg>GitHub
+        </a>
+      </div>
+      <p class="text-muted mb-0">Open-source. MIT licensed. Written in Go.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section container">
+  {{ partial "features" . }}
+</section>
+
+<section class="section container py-4">
+  <h3 class="text-secondary text-center mt-5 mb-4">The scan funnel</h3>
+  <div class="col-lg-10 mx-auto">
+    <div class="card border-0 shadow-sm">
+      <div class="card-body p-4">
+        <pre class="mb-0 text-center" style="font-size: 0.85rem; overflow-x: auto;"><code>[1] Discovery ──► [2] MCP Init ──► [3] PRM ──► [4] Auth Server ──► [5] Token ──► [6] DCR
+      │                │              │              │                │              │
+      ▼                ▼              ▼              ▼                ▼              ▼
+   401 + WWW-     initialize +    Fetch PRM     Fetch issuer       POST           DCR
+   Authenticate   tools/list      metadata      metadata          probe          probe</code></pre>
+      </div>
+    </div>
+    <p class="text-muted text-center mt-3">
+      Each step maps to specific RFCs:
+      <a href="https://modelcontextprotocol.io/specification">MCP</a>,
+      <a href="https://datatracker.ietf.org/doc/html/rfc9728">RFC 9728</a>,
+      <a href="https://datatracker.ietf.org/doc/html/rfc8414">RFC 8414</a>,
+      <a href="https://datatracker.ietf.org/doc/html/rfc7591">RFC 7591</a>,
+      <a href="https://datatracker.ietf.org/doc/html/rfc7636">RFC 7636</a>.
+    </p>
+  </div>
+</section>
+
+<section class="section container py-4">
+  <h3 class="text-secondary text-center mt-5 mb-4">Quick demo</h3>
+  <div class="col-lg-8 mx-auto">
+    <div class="card border-0 shadow-sm bg-dark text-light">
+      <div class="card-body p-4">
+        <pre class="mb-0 text-light" style="font-size: 0.9rem;"><code><span class="text-muted"># Install (no sudo)</span>
+curl -fsSL https://raw.githubusercontent.com/authprobe/authprobe/main/scripts/install.sh | sh
+
+<span class="text-muted"># Scan an MCP endpoint</span>
+authprobe scan https://mcp.example.com/mcp
+
+<span class="text-muted"># Output</span>
+Funnel
+ [1] MCP probe (401 + WWW-Authenticate)      <span class="text-success">[✓] PASS</span>
+ [2] MCP initialize + tools/list             <span class="text-danger">[X] FAIL</span>
+ [3] PRM fetch matrix                        <span class="text-success">[✓] PASS</span></code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section container py-4 mb-5">
+  <h3 class="text-secondary text-center mt-5 mb-4">Used in the wild</h3>
+  <div class="row justify-content-center g-4">
+    <div class="col-lg-4 col-md-6">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Sentry MCP</h5>
+          <p class="card-text text-muted">Used AuthProbe to identify and fix RFC 9728 PRM compliance gaps for <code>mcp.sentry.dev</code>.</p>
+          <a href="https://github.com/getsentry/sentry-mcp/pull/799" class="stretched-link"></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Kiro</h5>
+          <p class="card-text text-muted">Used AuthProbe to pinpoint an MCP server metadata/authorization detection issue.</p>
+          <a href="https://github.com/kirodotdev/Kiro/issues/5452#issuecomment-3899076021" class="stretched-link"></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Yargi MCP</h5>
+          <p class="card-text text-muted">Used AuthProbe to surface a protocol-compliance bug with JSON-RPC request IDs.</p>
+          <a href="https://github.com/saidsurucu/yargi-mcp/issues/18" class="stretched-link"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
