@@ -1,6 +1,6 @@
 # authprobe.com
 
-Marketing/documentation site for AuthProbe, built with Hugo and deployed to GitHub Pages.
+Documentation site for AuthProbe, built with Hugo and deployed to GitHub Pages.
 
 ## Local development
 
