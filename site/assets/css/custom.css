@@ -26,8 +26,8 @@ code:not([class]) {
   font-size: 0.875em;
 }
 
-/* Plain pre blocks (no highlight wrapper) */
-pre:not(.chroma) {
+/* Plain pre blocks (no highlight wrapper, exclude display-only blocks) */
+pre:not(.chroma):not([data-no-copy]) {
   background-color: #282a36;
   color: #f8f8f2;
   border-radius: 0.5rem;

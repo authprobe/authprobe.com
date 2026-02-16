@@ -23,12 +23,12 @@
 
 <section class="section container py-5">
   <h2 class="text-center mb-5">The scan funnel</h2>
-  <div class="mx-auto" style="overflow-x: auto;">
-    <div class="text-center mx-auto" style="font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; white-space: pre; font-size: 1.25rem; line-height: 2; color: #555;"><span style="font-weight:700;color:#1a56db">[1] Discovery</span> ──► <span style="font-weight:700;color:#1a56db">[2] MCP Init</span> ──► <span style="font-weight:700;color:#1a56db">[3] PRM</span> ──► <span style="font-weight:700;color:#1a56db">[4] Auth Server</span> ──► <span style="font-weight:700;color:#1a56db">[5] Token</span> ──► <span style="font-weight:700;color:#1a56db">[6] DCR</span>
-      │                │              │              │                │              │
-      ▼                ▼              ▼              ▼                ▼              ▼
-   401 + WWW-     initialize +    Fetch PRM     Fetch issuer       POST           DCR
-   Authenticate   tools/list      metadata      metadata          probe          probe</div>
+  <div class="d-flex justify-content-center" style="overflow-x: auto;">
+    <pre data-no-copy style="background: transparent; border: none; color: #333; font-size: 1.1rem; line-height: 1.8; padding: 1rem 0; margin: 0;"><code> [1] Discovery ──► [2] MCP Init ──► [3] PRM ──► [4] Auth Server ──► [5] Token ──► [6] DCR
+       │                │              │              │                │              │
+       ▼                ▼              ▼              ▼                ▼              ▼
+    401 + WWW-     initialize +    Fetch PRM     Fetch issuer       POST           DCR
+    Authenticate   tools/list      metadata      metadata          probe          probe</code></pre>
   </div>
   <p class="text-muted text-center mt-4" style="font-size: 1rem;">
     Each step maps to specific RFCs:
