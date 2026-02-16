@@ -21,27 +21,26 @@
   {{ partial "features" . }}
 </section>
 
-<section class="section container py-4">
-  <h3 class="text-secondary text-center mt-5 mb-4">The scan funnel</h3>
-  <div class="col-lg-10 mx-auto">
-    <div class="card border-0 shadow-sm">
-      <div class="card-body p-4">
-        <pre class="mb-0 text-center" data-no-copy style="font-size: 0.85rem; overflow-x: auto;"><code>[1] Discovery ──► [2] MCP Init ──► [3] PRM ──► [4] Auth Server ──► [5] Token ──► [6] DCR
-      │                │              │              │                │              │
-      ▼                ▼              ▼              ▼                ▼              ▼
-   401 + WWW-     initialize +    Fetch PRM     Fetch issuer       POST           DCR
-   Authenticate   tools/list      metadata      metadata          probe          probe</code></pre>
-      </div>
-    </div>
-    <p class="text-muted text-center mt-3">
-      Each step maps to specific RFCs:
-      <a href="https://modelcontextprotocol.io/specification">MCP</a>,
-      <a href="https://datatracker.ietf.org/doc/html/rfc9728">RFC 9728</a>,
-      <a href="https://datatracker.ietf.org/doc/html/rfc8414">RFC 8414</a>,
-      <a href="https://datatracker.ietf.org/doc/html/rfc7591">RFC 7591</a>,
-      <a href="https://datatracker.ietf.org/doc/html/rfc7636">RFC 7636</a>.
-    </p>
+<section class="section container py-5">
+  <h2 class="text-center mb-5">The scan funnel</h2>
+  <div class="mx-auto" style="overflow-x: auto;">
+    <div class="text-center mx-auto" style="font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; white-space: pre; font-size: 1.05rem; line-height: 2.2; color: #333;">
+<span style="display:inline-block; padding: 0.3rem 1rem; background: #e8f0fe; border-radius: 0.5rem; font-weight: 600; color: #1a56db;">[1] Discovery</span>  ──►  <span style="display:inline-block; padding: 0.3rem 1rem; background: #e8f0fe; border-radius: 0.5rem; font-weight: 600; color: #1a56db;">[2] MCP Init</span>  ──►  <span style="display:inline-block; padding: 0.3rem 1rem; background: #e8f0fe; border-radius: 0.5rem; font-weight: 600; color: #1a56db;">[3] PRM</span>  ──►  <span style="display:inline-block; padding: 0.3rem 1rem; background: #e8f0fe; border-radius: 0.5rem; font-weight: 600; color: #1a56db;">[4] Auth Server</span>  ──►  <span style="display:inline-block; padding: 0.3rem 1rem; background: #e8f0fe; border-radius: 0.5rem; font-weight: 600; color: #1a56db;">[5] Token</span>  ──►  <span style="display:inline-block; padding: 0.3rem 1rem; background: #e8f0fe; border-radius: 0.5rem; font-weight: 600; color: #1a56db;">[6] DCR</span>
+
+       │                   │                  │                  │                     │                  │
+       ▼                   ▼                  ▼                  ▼                     ▼                  ▼
+
+  <span style="color: #666;">401 + WWW-</span>        <span style="color: #666;">initialize +</span>       <span style="color: #666;">Fetch PRM</span>        <span style="color: #666;">Fetch issuer</span>          <span style="color: #666;">POST</span>              <span style="color: #666;">DCR</span>
+  <span style="color: #666;">Authenticate</span>      <span style="color: #666;">tools/list</span>         <span style="color: #666;">metadata</span>         <span style="color: #666;">metadata</span>              <span style="color: #666;">probe</span>             <span style="color: #666;">probe</span></div>
   </div>
+  <p class="text-muted text-center mt-4" style="font-size: 1rem;">
+    Each step maps to specific RFCs:
+    <a href="https://modelcontextprotocol.io/specification">MCP</a>,
+    <a href="https://datatracker.ietf.org/doc/html/rfc9728">RFC 9728</a>,
+    <a href="https://datatracker.ietf.org/doc/html/rfc8414">RFC 8414</a>,
+    <a href="https://datatracker.ietf.org/doc/html/rfc7591">RFC 7591</a>,
+    <a href="https://datatracker.ietf.org/doc/html/rfc7636">RFC 7636</a>.
+  </p>
 </section>
 
 <section class="section container py-4">
