@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="80" viewBox="0 0 320 80" role="img" aria-labelledby="title desc">
+  <title id="title">AuthProbe logo</title>
+  <desc id="desc">A magnifying glass icon and AuthProbe wordmark.</desc>
+  <rect width="320" height="80" rx="12" fill="#0b1020"/>
+  <circle cx="44" cy="40" r="16" fill="none" stroke="#67e8f9" stroke-width="6"/>
+  <line x1="55" y1="51" x2="70" y2="66" stroke="#67e8f9" stroke-width="6" stroke-linecap="round"/>
+  <text x="90" y="50" font-family="Inter, Arial, sans-serif" font-size="28" fill="#f8fafc" font-weight="700">AuthProbe</text>
+</svg>
