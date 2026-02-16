@@ -22,12 +22,12 @@ themesdir = "node_modules/@filipecarneiro"
   priority = 0.5
 
 [params]
-  images = ["/img/logo.svg"]
+  images = ["/img/logo.png"]
   author = "AuthProbe"
   description = "authprobe pinpoints MCP OAuth failures. Scan any MCP endpoint and get deterministic findings mapped to RFCs."
   github = "https://github.com/authprobe/authprobe"
-  logo = "/img/logo.svg"
-  mainMenuLogo = "/img/logo.svg"
+  logo = "/img/logo.png"
+  mainMenuLogo = "/img/logo-navbar.png"
 
   [params.options]
     bootStrapJs = true
