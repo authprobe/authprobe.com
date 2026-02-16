@@ -1,0 +1,29 @@
+defaultMarkdownHandler = "goldmark"
+
+[goldmark]
+
+  [goldmark.extensions]
+    definitionList = true
+    footnote = true
+    linkify = true
+    strikethrough = true
+    table = true
+    taskList = true
+    typographer = true
+
+  [goldmark.parser]
+    autoHeadingID = true
+
+    [goldmark.parser.attribute]
+      block = true
+      title = true
+
+  [goldmark.renderer]
+    hardWraps = false
+    unsafe = true
+    xHTML = false
+
+[tableOfContents]
+  endLevel = 3
+  ordered = false
+  startLevel = 2

@@ -1,0 +1,59 @@
+# Compatibility shim for older Hugo versions that do not auto-discover hugo.toml.
+# Keep this file in sync with site/hugo.toml.
+baseURL = "https://authprobe.com/"
+languageCode = "en-us"
+title = "AuthProbe"
+enableRobotsTXT = true
+theme = "hugo-bootstrap-theme"
+themesdir = "node_modules/@filipecarneiro"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML"]
+  term = ["HTML"]
+
+[outputFormats.RSS]
+  baseName = "index"
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[params]
+  images = ["/img/logo.svg"]
+  author = "AuthProbe"
+  description = "AuthProbe is a CLI that pinpoints where MCP OAuth breaks and provides deterministic findings and verification commands."
+  github = "https://github.com/authprobe/authprobe"
+  logo = "/img/logo.svg"
+
+[[menu.main]]
+  name = "Docs"
+  url = "/docs/"
+  weight = 10
+
+[[menu.main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 20
+
+[[menu.main]]
+  name = "Community"
+  url = "/community/"
+  weight = 30
+
+[[menu.main]]
+  name = "GitHub"
+  url = "https://github.com/authprobe/authprobe"
+  weight = 40
+
+[[menu.social]]
+  name = "GitHub"
+  url = "https://github.com/authprobe/authprobe"
+  weight = 10
+
+[[menu.social]]
+  name = "X"
+  url = "https://x.com/authprobe"
+  weight = 20

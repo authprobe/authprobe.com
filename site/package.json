@@ -1,0 +1,10 @@
+{
+  "name": "authprobe-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "AuthProbe Hugo site",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@filipecarneiro/hugo-bootstrap-theme": "1.0.8"
+  }
+}

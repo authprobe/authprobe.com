@@ -1,13 +1,13 @@
-.PHONY: dev build clean verify
+.PHONY: dev build clean deps
 
-dev:
-	cd site && hugo server -D
+deps:
+	cd site && if [ -f package-lock.json ] && [ ! -d node_modules/@filipecarneiro/hugo-bootstrap-theme ]; then npm ci; fi
 
-build:
-	cd site && hugo --gc --minify --baseURL "https://authprobe.com/"
+dev: deps
+	cd site && hugo server -D --disableFastRender
 
-verify: build
-	@test -f site/public/index.html
+build: deps
+	cd site && hugo --minify --baseURL "https://authprobe.com/"
 
 clean:
 	rm -rf site/public site/resources

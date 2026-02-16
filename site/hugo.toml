@@ -2,6 +2,8 @@ baseURL = "https://authprobe.com/"
 languageCode = "en-us"
 title = "AuthProbe"
 enableRobotsTXT = true
+theme = "hugo-bootstrap-theme"
+themesdir = "node_modules/@filipecarneiro"
 
 [outputs]
   home = ["HTML", "RSS"]
@@ -17,40 +19,25 @@ enableRobotsTXT = true
   filename = "sitemap.xml"
   priority = 0.5
 
-[markup]
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = true
-    lineNos = false
-    noClasses = false
-    style = "github"
-
-[module]
-  [[module.imports]]
-    path = "github.com/filipecarneiro/hugo-bootstrap-theme"
-
 [params]
+  images = ["/img/logo.svg"]
   author = "AuthProbe"
-  description = "Find where MCP OAuth breaks — fast."
-  tagline = "Find where MCP OAuth breaks — fast."
-  github = "https://github.com/authprobe"
+  description = "AuthProbe is a CLI that pinpoints where MCP OAuth breaks and provides deterministic findings and verification commands."
+  github = "https://github.com/authprobe/authprobe"
   logo = "/img/logo.svg"
 
 [[menu.main]]
   name = "Docs"
-  pageRef = "/docs"
   url = "/docs/"
   weight = 10
 
 [[menu.main]]
   name = "Blog"
-  pageRef = "/blog"
   url = "/blog/"
   weight = 20
 
 [[menu.main]]
   name = "Community"
-  pageRef = "/community"
   url = "/community/"
   weight = 30
 
@@ -59,17 +46,12 @@ enableRobotsTXT = true
   url = "https://github.com/authprobe/authprobe"
   weight = 40
 
-[[menu.footer]]
-  name = "Docs"
-  url = "/docs/"
-  weight = 10
-
-[[menu.footer]]
-  name = "Blog"
-  url = "/blog/"
-  weight = 20
-
-[[menu.footer]]
+[[menu.social]]
   name = "GitHub"
   url = "https://github.com/authprobe/authprobe"
-  weight = 30
+  weight = 10
+
+[[menu.social]]
+  name = "X"
+  url = "https://x.com/authprobe"
+  weight = 20
