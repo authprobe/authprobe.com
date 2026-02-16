@@ -26,7 +26,7 @@
   <div class="col-lg-10 mx-auto">
     <div class="card border-0 shadow-sm">
       <div class="card-body p-4">
-        <pre class="mb-0 text-center" style="font-size: 0.85rem; overflow-x: auto;"><code>[1] Discovery ──► [2] MCP Init ──► [3] PRM ──► [4] Auth Server ──► [5] Token ──► [6] DCR
+        <pre class="mb-0 text-center" data-no-copy style="font-size: 0.85rem; overflow-x: auto;"><code>[1] Discovery ──► [2] MCP Init ──► [3] PRM ──► [4] Auth Server ──► [5] Token ──► [6] DCR
       │                │              │              │                │              │
       ▼                ▼              ▼              ▼                ▼              ▼
    401 + WWW-     initialize +    Fetch PRM     Fetch issuer       POST           DCR
@@ -49,7 +49,7 @@
   <div class="col-lg-8 mx-auto">
     <div class="card border-0 shadow-sm bg-dark text-light">
       <div class="card-body p-4">
-        <pre class="mb-0 text-light" style="font-size: 0.9rem;"><code><span class="text-muted"># Install (no sudo)</span>
+        <pre class="mb-0 text-light" data-no-copy style="font-size: 0.9rem;"><code><span class="text-muted"># Install (no sudo)</span>
 curl -fsSL https://raw.githubusercontent.com/authprobe/authprobe/main/scripts/install.sh | sh
 
 <span class="text-muted"># Scan an MCP endpoint</span>
@@ -65,7 +65,7 @@ Funnel
   </div>
 </section>
 
-<section class="section container py-4 mb-5">
+<section class="section container py-4">
   <h3 class="text-secondary text-center mt-5 mb-4">Used in the wild</h3>
   <div class="row justify-content-center g-4">
     <div class="col-lg-4 col-md-6">
@@ -95,6 +95,17 @@ Funnel
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="section container py-4 mb-5">
+  <div class="col-lg-8 mx-auto text-center">
+    <p class="text-muted mb-2">
+      Like <code>authprobe</code>? Give it a
+      <a href="https://github.com/authprobe/authprobe" class="text-decoration-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="0" class="text-warning align-text-bottom"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        on GitHub</a> &mdash; it keeps us going.
+    </p>
   </div>
 </section>
 
