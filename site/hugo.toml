@@ -33,6 +33,12 @@ themesdir = "node_modules/@filipecarneiro"
     bootStrapJs = true
     breadCrumb = true
 
+[markup]
+  [markup.highlight]
+    noClasses = false
+    guessSyntax = true
+    lineNos = false
+
 [[menu.main]]
   name = "Docs"
   url = "/docs/"

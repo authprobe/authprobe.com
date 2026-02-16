@@ -1,0 +1,77 @@
+/* Code block container */
+.highlight {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.highlight pre {
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* Inline code */
+code:not([class]) {
+  background-color: #f0f0f0;
+  color: #e83e8c;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+}
+
+/* Plain pre blocks (no highlight wrapper) */
+pre:not(.chroma) {
+  background-color: #282a36;
+  color: #f8f8f2;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* Copy button */
+.copy-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ccc;
+  border-radius: 0.375rem;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s, background 0.2s;
+  z-index: 1;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.highlight:hover .copy-btn,
+.code-wrapper:hover .copy-btn {
+  opacity: 1;
+}
+
+.copy-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.copy-btn.copied {
+  background: rgba(80, 250, 123, 0.3);
+  border-color: rgba(80, 250, 123, 0.5);
+  color: #50fa7b;
+}
+
+/* Wrapper for plain pre blocks to support copy button positioning */
+.code-wrapper {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.code-wrapper pre {
+  margin-bottom: 0;
+}

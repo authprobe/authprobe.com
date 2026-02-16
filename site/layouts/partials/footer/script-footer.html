@@ -21,4 +21,15 @@
   {{ end }}
 {{end}}
 
+{{/* Copy-to-clipboard for code blocks */}}
+{{ $copyJs := resources.Get "js/copy-code.js" }}
+{{ if $copyJs }}
+  {{ if eq hugo.Environment "development" }}
+    <script src="{{ $copyJs.Permalink | relURL }}" defer></script>
+  {{ else }}
+    {{ $copyJs = $copyJs | minify | fingerprint "sha512" }}
+    <script src="{{ $copyJs.Permalink }}" integrity="{{ $copyJs.Data.Integrity }}" crossorigin="anonymous" defer></script>
+  {{ end }}
+{{ end }}
+
 {{ template "_internal/google_analytics.html" . }}
