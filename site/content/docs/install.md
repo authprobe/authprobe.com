@@ -1,14 +1,44 @@
 ---
 title: "Install"
-weight: 20
+weight: 10
 ---
 
-Install AuthProbe using your preferred package workflow for your environment.
+## Install script (recommended)
 
-After installation, verify the CLI is available:
+Downloads the latest release binary into `~/.local/bin`. No sudo required.
 
 ```bash
-authprobe --help
+curl -fsSL https://raw.githubusercontent.com/authprobe/authprobe/main/scripts/install.sh | sh
 ```
 
-Then continue to [Quickstart](/docs/quickstart/).
+## Go toolchain
+
+```bash
+go install github.com/authprobe/authprobe/cmd/authprobe@latest
+```
+
+## Docker
+
+```bash
+docker pull ghcr.io/authprobe/authprobe:latest
+
+docker run --rm ghcr.io/authprobe/authprobe:latest scan https://mcp.example.com/mcp
+```
+
+## Release binary
+
+Download the latest release from [GitHub Releases](https://github.com/authprobe/authprobe/releases) and place it on your `PATH`.
+
+## Clone and build
+
+```bash
+git clone https://github.com/authprobe/authprobe.git
+cd authprobe
+go run cmd/authprobe/main.go scan https://mcp.example.com/mcp
+```
+
+## Verify
+
+```bash
+authprobe --version
+```
