@@ -75,3 +75,4 @@ authprobe scan https://mcp.example.com/mcp \
 - **Sentry MCP** used AuthProbe to identify and fix RFC 9728 PRM compliance gaps for `mcp.sentry.dev` ([PR #799](https://github.com/getsentry/sentry-mcp/pull/799)).
 - **Kiro** used AuthProbe to pinpoint an MCP server metadata/authorization detection issue ([details](https://github.com/kirodotdev/Kiro/issues/5452#issuecomment-3899076021)).
 - **Yargi MCP** used AuthProbe to surface a protocol-compliance bug with JSON-RPC request IDs ([details](https://github.com/saidsurucu/yargi-mcp/issues/18)).
+- **RivalSearchMCP** used AuthProbe to identify and fix `MCP_JSONRPC_ID_NULL_ACCEPTED` by rejecting JSON-RPC requests with a null request ID ([issue #5](https://github.com/damionrashford/RivalSearchMCP/issues/5)).
