@@ -48,20 +48,18 @@
 
 <section class="section container py-4">
   <h3 class="text-secondary text-center mt-5 mb-4">Used in the wild</h3>
-  <div class="row justify-content-center g-4 mb-1">
-    <div class="col-lg-6 col-md-8">
-      <div class="card h-100 border-0 shadow-sm">
-        <div class="card-body text-center">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+    <div class="col d-flex">
+      <div class="card h-100 w-100 border-0 shadow-sm">
+        <div class="card-body">
           <h5 class="card-title">Anthropic MCP Python SDK</h5>
           <p class="card-text text-muted">Used AuthProbe to validate an OAuth interoperability issue in the Python SDK and document the behavior seen in the wild.</p>
           <a href="https://github.com/modelcontextprotocol/python-sdk/issues/2057" class="stretched-link"></a>
         </div>
       </div>
     </div>
-  </div>
-  <div class="row justify-content-center g-4">
-    <div class="col-lg-4 col-md-6">
-      <div class="card h-100 border-0 shadow-sm">
+    <div class="col d-flex">
+      <div class="card h-100 w-100 border-0 shadow-sm">
         <div class="card-body">
           <h5 class="card-title">Sentry MCP</h5>
           <p class="card-text text-muted">Used AuthProbe to identify and fix RFC 9728 PRM compliance gaps for <code>mcp.sentry.dev</code>.</p>
@@ -69,8 +67,8 @@
         </div>
       </div>
     </div>
-    <div class="col-lg-4 col-md-6">
-      <div class="card h-100 border-0 shadow-sm">
+    <div class="col d-flex">
+      <div class="card h-100 w-100 border-0 shadow-sm">
         <div class="card-body">
           <h5 class="card-title">Kiro</h5>
           <p class="card-text text-muted">Used AuthProbe to pinpoint an MCP server metadata/authorization detection issue.</p>
@@ -78,8 +76,8 @@
         </div>
       </div>
     </div>
-    <div class="col-lg-4 col-md-6">
-      <div class="card h-100 border-0 shadow-sm">
+    <div class="col d-flex">
+      <div class="card h-100 w-100 border-0 shadow-sm">
         <div class="card-body">
           <h5 class="card-title">Yargi MCP</h5>
           <p class="card-text text-muted">Used AuthProbe to surface a protocol-compliance bug with JSON-RPC request IDs.</p>
@@ -87,12 +85,21 @@
         </div>
       </div>
     </div>
-    <div class="col-lg-4 col-md-6">
-      <div class="card h-100 border-0 shadow-sm">
+    <div class="col d-flex">
+      <div class="card h-100 w-100 border-0 shadow-sm">
         <div class="card-body">
           <h5 class="card-title">RivalSearchMCP</h5>
           <p class="card-text text-muted">Used AuthProbe to identify and fix <code>MCP_JSONRPC_ID_NULL_ACCEPTED</code> by rejecting JSON-RPC requests with a null request ID.</p>
           <a href="https://github.com/damionrashford/RivalSearchMCP/issues/5" class="stretched-link"></a>
+        </div>
+      </div>
+    </div>
+    <div class="col d-flex">
+      <div class="card h-100 w-100 border-0 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Your MCP project</h5>
+          <p class="card-text text-muted">Found a bug with AuthProbe? Open an issue or PR and we can feature your fix here.</p>
+          <a href="https://github.com/authprobe/authprobe/issues/new" class="stretched-link"></a>
         </div>
       </div>
     </div>
